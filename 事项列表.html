@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .back {
+            width: 1520px;
+            height: 700px;
+            margin: 2px;
+            background-image: url(FOX_Logo_DedSecLdn.png);
+            background-size: 1500px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .main {
+            width: 250px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #dcdde1;
+        }
+        
+        .list {
+            list-style: none;
+        }
+        
+        h1 {
+            color: #f5f6fa;
+            text-align: center;
+        }
+        
+        li {
+            height: 30px;
+            color: #CAD3C8;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        
+        li input {
+            appearance: none;
+            margin-left: 0px;
+        }
+        
+        li label {
+            position: absolute;
+            left: 70px;
+            transition: 0.5s;
+        }
+        
+        .check {
+            content: " ";
+            height: 20px;
+            width: 20px;
+            border-radius: 15px;
+            background: #0984e3;
+            position: absolute;
+            transition: 1s;
+        }
+        
+        .check::before {
+            content: " ";
+            height: 12px;
+            width: 12px;
+            background: #2d3436;
+            position: absolute;
+            border-radius: 15px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        input:checked~.check::before {
+            background: #2ed573;
+        }
+        
+        input:checked~.check {
+            background: #ffffff;
+            filter: brightness(100%);
+        }
+        
+        input:checked~label {
+            text-decoration: line-through;
+            filter: blur(1px);
+        }
+        
+        .main:hover~.back {
+            filter: blur(10px);
+        }
+    </style>
+    <div class="back"></div>
+    <div class="main">
+        <h1>TO DO LIST</h1>
+        <ul class="list">
+            <li>
+                <input type="checkbox" id="cb1">
+                <i class="check"></i>
+                <label for="cb1">1231111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb2">
+                <i class="check"></i>
+                <label for="cb2">1231111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb3">
+                <i class="check"></i>
+                <label for="cb3">12311111111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb4">
+                <i class="check"></i>
+                <label for="cb4">1231111111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb5">
+                <i class="check"></i>
+                <label for="cb5">1231111111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb6">
+                <i class="check"></i>
+                <label for="cb6">12311111111111</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cb7">
+                <i class="check"></i>
+                <label for="cb7">123111111111111</label>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
