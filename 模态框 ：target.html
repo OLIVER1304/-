@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background: #9c88ff;
+        }
+        
+        .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f5f6fa;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        
+        .btn:hover {
+            color: #7bed9f;
+        }
+        
+        .window {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: white;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .window:target {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .window>div {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .window-close {
+            float: right;
+            text-decoration: none;
+            color: #747d8c;
+        }
+        
+        .title {
+            color: #7bed9f;
+        }
+        
+        .content {
+            color: black;
+            padding: 0px;
+        }
+    </style>
+    <div id="btn">
+        <a href="#window" class="btn"> css实现模态框</a>
+    </div>
+    <div id="window" class="window">
+        <div>
+            <a href="#" class="window-close">close</a>
+            <h1 class="title">TITLE</h1>
+            <div class="content">
+                用纯css实现模态框zxzxzxzxzxzxzxzxzxzxzxzczczczczczczc
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
