@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrop/css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(37, 2, 2);
+        }
+        
+        .outbox {
+            width: 400px;
+            height: 900px;
+            position: relative;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1.5%;
+            padding: 10px;
+            background-color: rgb(95, 43, 43, 0.5);
+        }
+        
+        .abc {
+            width: 400px;
+            border: 1px solid pink;
+            position: relative;
+        }
+        
+        .box1 {
+            float: left;
+            width: 250px;
+            height: 30px;
+            margin-left: 10px;
+            padding: 8px;
+            border: 1px solid rgb(170, 51, 70, 0.9);
+            color: rgb(170, 51, 70, 0.5);
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .box2 {
+            float: left;
+            width: 70px;
+            height: 30px;
+            padding: 8px;
+            border: 1px solid rgb(170, 51, 70, 0.9);
+            color: rgb(170, 51, 70, 0.9);
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .box3 {
+            float: left;
+            width: 35px;
+            height: 30px;
+            padding: 8px;
+            border: 1px solid rgb(170, 51, 70, 0.9);
+            margin-left: 10px;
+            margin-top: 8px;
+            clear: both;
+        }
+        
+        .box4 {
+            float: left;
+            width: 115px;
+            height: 30px;
+            padding: 3px 8px;
+            border: 1px solid rgb(170, 51, 70, 0.9);
+            margin-top: 8px;
+            margin-left: 8px;
+            color: rgb(170, 51, 70, 0.9);
+            font-size: 9px;
+            text-align: center;
+        }
+        
+        .picture {
+            width: 400px;
+            height: 100px;
+            border: 1px solid pink;
+            color: #fffa65;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bolder;
+            position: relative;
+            margin-top: 2em;
+        }
+        
+        .main {
+            border: none;
+            border: 2px solid pink;
+            width: 320px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-top: 4em;
+        }
+        
+        .main-small-1 {
+            width: 310px;
+            height: 50px;
+            position: relative;
+            background: transparent;
+            display: flex;
+            margin: 0px 0px;
+            padding-left: 10px;
+            align-items: center;
+            justify-content: left;
+            text-transform: uppercase;
+        }
+        
+        .main .main-small-1 a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #ff4757;
+        }
+        
+        .main .main-small-1:hover {
+            background-color: rgb(138, 138, 143, 0.5);
+            border: 1px solid aqua;
+        }
+        
+        .main .main-small-1:hover a {
+            color: aqua;
+        }
+        
+        .bottom {
+            width: 380px;
+            height: 150px;
+            border: 1px solid rgb(170, 51, 70, 0.9);
+            position: relative;
+        }
+        
+        .text0 {
+            width: 100px;
+            height: 20px;
+            color: #ff4757;
+            font-size: 10px;
+            display: flex;
+            margin-right: auto;
+            border: 1px solid pink;
+            position: relative;
+            margin-top: 3em;
+        }
+        
+        .text1 {
+            width: 50px;
+            height: 20px;
+            color: #ff4757;
+            font-size: 15px;
+            margin-left: 0.5%;
+            margin-top: 5px;
+        }
+        
+        .luc1 {
+            width: 470px;
+            height: 50px;
+            color: rgb(170, 51, 70, 0.9);
+            font-size: 5px;
+            padding: 5px 9px;
+            border: 3px solid rgb(128, 59, 59);
+            float: right;
+            margin-top: 1.5%;
+        }
+        
+        .luc2 {
+            width: 470px;
+            height: 50px;
+            color: rgb(170, 51, 70, 0.9);
+            font-size: 13px;
+            padding: 5px 0px;
+            border: 1px solid transparent;
+            float: right;
+            margin-top: 1.5%;
+            margin-right: 1%;
+        }
+        
+        @media screen and (min-width:1910px) {
+            .container {
+                width: 1800px;
+            }
+            .col-sm-3 {
+                width: 22%;
+            }
+        }
+        /* 在宽度1910px以上的屏幕时 */
+        
+        @media screen and (max-width:1441px) {
+            .container {
+                width: 1400px;
+            }
+            .col-sm-3 {
+                width: 20%;
+                height: 50%;
+            }
+            .main-small-1 {
+                padding-left: 10%;
+            }
+            .box1 {
+                width: 60%;
+                font-size: 4px;
+            }
+            .box2 {
+                width: 20%;
+                font-size: 4px;
+            }
+            .box3 {
+                width: 13%;
+            }
+            .box4 {
+                width: 40%;
+            }
+            .md-3 {
+                width: 107%;
+            }
+        }
+        /* 在宽度为1441px以下屏幕时 */
+        
+        @media screen and (max-width: 1024px) {
+            .container {
+                width: 95%;
+            }
+            .col-sm-3 {
+                width: 25%;
+            }
+            .main-small-1 {
+                padding-left: 20px;
+            }
+        }
+        /* 在宽度为1024px的屏幕时 */
+        
+        @media screen and (max-width: 769px) {
+            .col-sm-3 {
+                width: 25%;
+            }
+            .box1 {
+                margin-left: 0;
+                width: 100%;
+                font-size: 4px;
+            }
+            .box2 {
+                margin-top: 5px;
+                width: 20%;
+                font-size: 4px;
+                padding: 10px 3px;
+            }
+            .box3 {
+                margin-top: 5px;
+                margin-left: 5px;
+                clear: none;
+                width: 13%;
+            }
+            .box4 {
+                margin-top: 5px;
+                margin-left: 5px;
+                width: 40%;
+            }
+        }
+        /* }在宽度为768px的屏幕时 */
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="outbox  col-sm-3">
+                <div class="abc md-3">
+                    <div class="box1">
+                        <p>4238074200230984347598347593[]c93475</p>
+                    </div>
+                    <div class="box2">
+                        <p>v74394</p>
+                    </div>
+                    <div class="box3"></div>
+                    <div class="box4">
+                        <p>4238982.1127.200 00 xx v.0001203</p>
+                    </div>
+                </div>
+                <div class="picture md-3">
+                    <p>cyberpunk</p>
+                </div>
+                <div class="main md-3">
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">continue</a>
+                    </div>
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">new game</a>
+                    </div>
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">load game</a>
+                    </div>
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">settings</a>
+                    </div>
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">credits</a>
+                    </div>
+                    <div class="main-small-1">
+                        <a href="javascript:void(0)">quit game</a>
+                    </div>
+                </div>
+                <div class="text0 md-3">
+                    <p>trn_tclas_800095</p>
+                </div>
+                <div class="bottom">
+                    <div class="text1 md-3">
+                        <p>1.05</p>
+                    </div>
+                </div>
+            </div>
+            <div class="luc1">
+                <p>sfsdfsdf sdfdfsdfsfew kwkewklk fwefwklelf wlkelwkflkwl lkelwklk wfekwefwef sdvsdvslk sdvsdvwefk sdcefeffac ksds65df65s4 a5sd4a5sd6 sa5d465a4 s5d46a5s4d65 a65s4d65a d56s s54a6d546 asdad45a sd46a5sd 5a4654w5 ada65s4d 4wf5w4ef fw54e6f5s65
+                    6s5f465s41d65fs 5f46w5e4fs fe54w654f 5w465ef4 3213w21e 3e21w3 </p>
+            </div>
+            <div class="luc2">
+                <p>nghi dty ccrp record database //00442923402390002029 3.sdscsdc188 0000000 // 91235/151 twtkkkwog513213 20213565465 321321546554654 4029 </p>
+            </div>
+            <div class="rdc">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
