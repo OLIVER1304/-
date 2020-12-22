@@ -169,21 +169,21 @@
         }
         
         .luc1 {
-            width: 470px;
-            height: 50px;
-            color: rgb(170, 51, 70, 0.9);
+            width: 450px;
+            height: 36px;
+            color: rgb(170, 51, 70, 0.5);
             font-size: 5px;
-            padding: 5px 9px;
-            border: 3px solid rgb(128, 59, 59);
+            padding: 0px 3px;
+            border: 2px solid rgb(128, 59, 59, 0.5);
             float: right;
             margin-top: 1.5%;
         }
         
         .luc2 {
-            width: 470px;
-            height: 50px;
-            color: rgb(170, 51, 70, 0.9);
-            font-size: 13px;
+            width: 450px;
+            height: 36px;
+            color: rgb(170, 51, 70, 0.5);
+            font-size: 10px;
             padding: 5px 0px;
             border: 1px solid transparent;
             float: right;
@@ -217,6 +217,15 @@
             border: 2px solid aqua;
             margin: 4px;
             border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .rdc-1 p {
+            padding: 0 0;
+            margin: 0 0;
+            color: aqua;
         }
         
         .o {
@@ -260,7 +269,7 @@
         
         @media screen and (max-width:1441px) {
             .container {
-                width: 1400px;
+                width: 93%;
             }
             .col-sm-3 {
                 width: 20%;
@@ -269,8 +278,11 @@
             .main-small-1 {
                 padding-left: 10%;
             }
+            .picture {
+                margin-top: 10%;
+            }
             .box1 {
-                width: 60%;
+                width: 70%;
                 font-size: 4px;
             }
             .box2 {
@@ -286,10 +298,16 @@
             .md-3 {
                 width: 107%;
             }
+            .bottom {
+                width: 100%;
+            }
+            .rdc {
+                margin-top: 58%;
+            }
         }
         /* 在宽度为1441px以下屏幕时 */
         
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1025px) {
             .container {
                 width: 95%;
             }
@@ -299,10 +317,13 @@
             .main-small-1 {
                 padding-left: 20px;
             }
+            .rdc {
+                margin-top: 74%;
+            }
         }
         /* 在宽度为1024px的屏幕时 */
         
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 770px) {
             .col-sm-3 {
                 width: 25%;
             }
@@ -328,8 +349,91 @@
                 margin-left: 5px;
                 width: 40%;
             }
+            .rdc {
+                margin-top: 98.5%;
+                width: 50%;
+            }
+            .os {
+                margin-left: 5%;
+            }
+            .p {
+                margin-left: 3%;
+            }
         }
         /* }在宽度为768px的屏幕时 */
+        
+        @media screen and (max-width: 430px) {
+            .container {
+                margin-left: 1%;
+                width: 98%;
+            }
+            .col-sm-3 {
+                width: 100%;
+            }
+            .box1 {
+                margin-left: 1.5%;
+                width: 78%;
+                font-size: 0.1px;
+            }
+            .box2 {
+                margin-top: 0px;
+                width: 18%;
+                font-size: 4px;
+                padding: 10px 3px;
+            }
+            .box3 {
+                margin-top: 5px;
+                margin-left: 5px;
+                clear: none;
+                width: 13%;
+            }
+            .box4 {
+                margin-top: 5px;
+                margin-left: 5px;
+                width: 40%;
+            }
+            .picture {
+                margin-top: 0%;
+                margin-left: 0%;
+                font-size: 45px;
+                height: 20%;
+            }
+            .main {
+                margin: 0;
+                height: 60%;
+            }
+            .main-small-1 {
+                padding-left: 0px;
+                width: 100%;
+            }
+            .main-small-1 a {
+                padding: 0 0;
+                margin: 0px auto;
+                font-size: 15px!important;
+            }
+            .text0 {
+                margin: 0;
+                margin-left: 9%;
+            }
+            .bottom {
+                width: 100%;
+            }
+            .rdc {
+                margin-top: 0;
+                width: 100%;
+            }
+            .luc1,
+            .luc2 {
+                margin: 0;
+                width: 100%;
+            }
+            .os {
+                margin-left: 5%;
+            }
+            .p {
+                margin-left: 2%;
+            }
+        }
     </style>
     <div class="container">
         <div class="row">
@@ -386,13 +490,16 @@
                 <p>nghi dty ccrp record database //00442923402390002029 3.sdscsdc188 0000000 // 91235/151 twtkkkwog513213 20213565465 321321546554654 4029 </p>
             </div>
             <div class="rdc">
-                <div class="rdc-1"></div>
+                <div class="rdc-1">
+                    <p>3</p>
+                </div>
                 <p>my rewards</p>
                 <div class="o os"></div>
                 <div class="o"></div>
                 <div class="o"></div>
                 <div class="p">
-                    <div class="p-1"></div>
+                    <div class="p-1">
+                    </div>
                 </div>
                 <div class="q"></div>
             </div>
