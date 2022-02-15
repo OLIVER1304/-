@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="point" data-index=piggy,buxihuan></div>
+    <div class="point" data-index=溯,胡梦周/马吟吟></div>
+    <div class="point" data-index=晚安,颜人中></div>
+
+    <div id="contaner" class="contaner"></div>
+</body>
+<style>
+    .point {
+        background: black;
+        margin: 0 20px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+    }
+    
+    .contaner {
+        width: 300px;
+        height: 200px;
+        background: gray;
+    }
+</style>
+<script>
+    var point = document.getElementsByClassName('point')
+    var contaner = document.getElementById('contaner')
+    for (var i = 0; i < point.length; i++) {
+        point[i].addEventListener('click', function() {
+            var pointindex = this.getAttribute('data-index');
+            index = pointindex;
+            var v = index.split(",")
+            console.log(v[0])
+            var o = document.createElement('div')
+            var p = document.createElement('p')
+            var q = document.createElement('p')
+            p.innerHTML = v[0]
+            q.innerHTML = v[1]
+            o.appendChild(p)
+            o.appendChild(q)
+            contaner.appendChild(o)
+        })
+    }
+</script>
+
+</html>

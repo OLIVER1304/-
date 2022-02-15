@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>返回顶部效果</title>
+
+    <style>
+        .slider-bar {
+            position: fixed;
+            left: 47%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            background-color: pink;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .w {
+            width: 1100px;
+            margin: 10px auto;
+        }
+        
+        .header {
+            height: 150px;
+            background-color: purple;
+        }
+        
+        .banner {
+            height: 250px;
+            background-color: skyblue;
+        }
+        
+        .main {
+            height: 1000px;
+            background-color: yellowgreen;
+        }
+        
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <span class="goBack">返回顶部</span>
+    </div>
+    <div class="header w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体部分</div>
+    <script>
+        51 // querySelector() 方法返回匹配指定选择器（）的第一个元素，传的必须是字符串
+        var sliderbar = document.querySelector('.slider-bar');
+        var banner = document.querySelector('.banner');
+        var bannerTop = banner.offsetTop; // banner模块距离顶部的长度
+        var sliderbarTop = sliderbar.offsetTop - bannerTop; // 侧边栏固定后距离顶部的长度
+        var main = document.querySelector('.main');
+        var goBack = document.querySelector('.goBack');
+        var mainTop = main.offsetTop; // main模块距离顶部的长度
+        // scroll 屏幕发生滚动事件时执行
+        document.addEventListener('scroll', function() {
+            if (window.pageYOffset >= bannerTop) { // window.pageYOffset 屏幕被滚上去的距离
+                // 当用户滚到banner模块时使侧边栏变为固定状态
+                sliderbar.style.display = 'block';
+                sliderbar.style.top = sliderbarTop + 'px';
+
+            } else {
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+
+            }
+            if (window.pageYOffset >= mainTop) { // 当用户滚到main模块时显示返回顶部按钮
+                goBack.style.display = 'block';
+
+            } else {
+                goBack.style.display = 'none';
+
+            }
+        });
+        sliderbar.addEventListener('click', function() {
+                animate(window, 0);
+
+            })
+            /* 动画函数：
+83          *  obj 做动画的对象（这里就是指window）
+84          *  target 目标位置（顶部）
+85          *  callback 回调函数（没有传参的话就不执行）
+86          */
+
+
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer); // 先清除定时器，保证只有一个定时器在执行，以免出现bug
+            obj.timer = setInterval(function() {
+                // window.pageYOffset距离顶部的距离（是负的）
+
+                var step = (target - window.pageYOffset) / 10; // step步长（让页面速度逐渐变慢的滑动上去）
+                step = step > 0 ? Math.ceil(step) : Math.floor(step); // step并不总是整数。大于零向上取整,小于零向下取整
+
+                if (window.pageYOffset == target) { // 当页面回到顶部后(即动画执行完) 清除定时器
+                    clearInterval(obj.timer);
+                    95 //  判断是否传了回调函数
+                    96
+                    /* if(callback) { 
+97                         callback();
+98                     } */
+                    99 // 可以简写为下边这种。 &&是短路运算符，存在callback（即第一个式子为true）时才会继续执行callback()
+                    callback && callback();
+                    101
+                }
+                102 // window.scroll(x, y) 滚动到文档特定位置
+                window.scroll(0, window.pageYOffset + step);
+                104
+            }, 15);
+            105
+        }
+        106
+    </script>
+    107 </body>
+108
+
+</html>

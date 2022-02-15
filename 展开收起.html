@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="p1"><b>介绍：</b>
+        <br>曲折的故事终会有一个圆满的结局
+        <br> 至少人们看见了墨色宇宙中璀璨的星辉
+        <br> 远方的山川开始变得温柔
+        <br> 大概一切都会好起来
+        <br> 你如流星从天空滑过
+        <br> 我站在彼端凝望
+        <br> 你留光明于天际
+        <br> 我目送你远去
+        <br> 或许有一天我会再次祝愿你
+        <br>不要被黑夜束缚
+        <br> 变得更加温暖与热烈
+        <br>现在是冬日
+        <br> 晚风轻踩着云朵
+        <br> 月亮在贩售快乐
+        <br>我合十双手
+        <br>真诚祝愿
+        <br> 你从银河背后靠近我
+        <br> 我与星辉一同为你沦陷
+        <br>“我爱你 如鲸向海 如鸟投林 不可避免 退无可退”</div>
+    <a id=a1 href="javascript:;" onclick="">收起</a>
+    <script>
+        window.onload = function() {
+            var div = document.getElementsByTagName('div')[0];
+            console.log(div);
+            var a = document.getElementsByTagName('a')[0];
+            var str = div.innerHTML;
+            var oopen = true;
+            a.onclick = function() {
+                if (oopen == true) {
+                    div.innerHTML = str.substring(0, 150);
+                    a.innerHTML = '展开';
+                } else {
+                    div.innerHTML = str;
+                    a.innerHTML = '收起';
+                }
+                oopen = !oopen;
+            }
+        }
+    </script> -->
+    <style>
+        .p1-1 {
+            display: none;
+        }
+        
+        .p1-2 {
+            display: block;
+        }
+        
+        .p2-1 {
+            display: block;
+        }
+        
+        .p2-2 {
+            display: none;
+        }
+    </style>
+    <div class="p1-1"><b>介绍：</b>
+        <br>曲折的故事终会有一个圆满的结局
+        <br> 至少人们看见了墨色宇宙中璀璨的星辉
+        <br> 远方的山川开始变得温柔
+        <br> 大概一切都会好起来
+        <br> 你如流星从天空滑过
+        <br> 我站在彼端凝望
+        <br> 你留光明于天际
+        <br> 我目送你远去
+        <br> 或许有一天我会再次祝愿你
+        <br>不要被黑夜束缚
+        <br> 变得更加温暖与热烈
+        <br>现在是冬日
+        <br> 晚风轻踩着云朵
+        <br> 月亮在贩售快乐
+        <br>我合十双手
+        <br>真诚祝愿
+        <br> 你从银河背后靠近我
+        <br> 我与星辉一同为你沦陷
+        <br>“我爱你 如鲸向海 如鸟投林 不可避免 退无可退”</div>
+    <div class="p1-2"><b>介绍：</b>
+        <br>曲折的故事终会有一个圆满的结局
+        <br> 至少人们看见了墨色宇宙中璀璨的星辉
+        <br> 远方的山川开始变得温柔
+        <br> 大概一切都会好起来
+        <br> 你如流星从天空滑过
+        <br> 我站在彼端凝望
+        <br> 你留光明于天际
+        <br> 我目送你远去
+        <br> 或许有一天我会再次祝愿...</div>
+    <a id="a1" href="javascript:;">展开</a>
+    <script>
+        window.onload = function() {
+            var p1 = document.getElementsByClassName('p1-1')[0];
+            var p2 = document.getElementsByClassName('p1-2')[0];
+            var a = document.getElementsByTagName('a')[0];
+            var oopen = true;
+            a.onclick = function() {
+                if (oopen == true) {
+                    p1.className = 'p2-1';
+                    p2.className = 'p2-2';
+                    a.innerHTML = '收起';
+                } else {
+                    p1.className = 'p1-1';
+                    p2.className = 'p1-2';
+                    a.innerHTML = '展开';
+                }
+                oopen = !oopen;
+            }
+        }
+    </script>
+</body>
+
+</html>
